@@ -17,8 +17,14 @@ class Band():
             result+= f'{i.play_solo()}\n'
         return result
 
-    def to_list(self):
-        return Band.members
+    def to_list(cls):
+        print(f"members of the {cls.bands} are {cls.members}")
+
+    def __str__(self):
+        return f"Band <{self.name}>"
+    
+    def __repr__(self):
+        return f" '{self.name}' "
     
 class Musician():
         
@@ -99,3 +105,6 @@ if __name__ == "__main__":
     habail.add_members(emad)
     print(habail.play_solos())
     print(habail.bands)
+    print(habail.__str__())
+    print(habail.__repr__())
+    Band.to_list
