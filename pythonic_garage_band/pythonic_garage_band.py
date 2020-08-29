@@ -16,7 +16,8 @@ class Band():
         for i in Band.members:
             result+= f'{i.play_solo()}\n'
         return result
-
+        
+    @classmethod
     def to_list(cls):
         print(f"members of the {cls.bands} are {cls.members}")
 
